@@ -1,0 +1,157 @@
+:root {
+  --bg-1: #0a1118;
+  --bg-2: #121e2b;
+  --ink: #ecf4ff;
+  --muted: #9db2c8;
+  --line: rgba(175, 205, 233, 0.28);
+  --accent: #54d6b7;
+  --accent-soft: rgba(84, 214, 183, 0.15);
+  --card: rgba(11, 19, 29, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(84, 214, 183, 0.2) 0%, transparent 36%),
+    radial-gradient(circle at 78% 78%, rgba(65, 141, 228, 0.24) 0%, transparent 40%),
+    linear-gradient(140deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+
+.site {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+header {
+  padding: 24px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  margin-left: 16px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--ink);
+}
+
+.hero {
+  padding: 56px 0 36px;
+  display: block;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 4.2vw, 4rem);
+  line-height: 1.1;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 16px;
+  max-width: 680px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  background: var(--card);
+  backdrop-filter: blur(6px);
+}
+
+.projects {
+  padding: 24px 0 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  background: var(--card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(4, 10, 16, 0.45);
+  border-color: rgba(84, 214, 183, 0.52);
+}
+
+.project-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.project-link {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: var(--accent);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 36px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding-top: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

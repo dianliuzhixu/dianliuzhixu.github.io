@@ -146,6 +146,29 @@ footer {
   font-size: 0.9rem;
 }
 
+.douyin-card {
+  width: fit-content;
+  margin: 0 0 18px;
+  text-align: center;
+  color: var(--ink);
+}
+
+.douyin-card img {
+  display: block;
+  width: 132px;
+  height: 132px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.douyin-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
 @media (max-width: 860px) {
   .hero {
     padding-top: 36px;

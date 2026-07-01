@@ -160,6 +160,9 @@ code {
 
 footer { padding: 34px 20px; text-align: center; color: var(--muted); border-top: 1px solid var(--line); }
 footer p { margin: 5px 0; font-size: .85rem; }
+.douyin-card { width: fit-content; margin: 18px auto; text-align: center; color: var(--text); }
+.douyin-card img { display: block; width: 132px; height: 132px; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.94); }
+.douyin-card p { margin: 8px 0 0; color: var(--muted); font-size: .84rem; }
 
 @media (max-width: 900px) {
   .manual-layout { grid-template-columns: minmax(0, 1fr); }

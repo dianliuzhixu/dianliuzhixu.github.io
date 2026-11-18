@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7XBK7DT02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Q7XBK7DT02');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWD Programmer · STM32 离线烧录器 | 电流秩序</title>
+    <meta name="description" content="SWD Programmer 是一款 STM32 触屏离线烧录器，可从板载存储或 SD 卡读取 HEX 固件，完成目标芯片的擦除、写入和校验。" />
+    <meta property="og:title" content="SWD Programmer · STM32 离线烧录器" />
+    <meta property="og:description" content="在触屏上选择目标芯片和 HEX 固件，通过 SWD 完成离线烧录。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="programmer.css" />
+  </head>
+  <body>
+    <header class="site-header glass">
+      <a class="logo" href="../">电流秩序</a>
+      <nav class="nav-links" aria-label="产品导航">
+        <a href="#features">产品功能</a>
+        <a href="#guide">使用步骤</a>
+        <a href="#specs">规格与接线</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="programmer-hero" aria-labelledby="product-name">
+        <div>
+          <h1 id="product-name">SWD Programmer</h1>
+          <p class="product-subtitle">STM32 触屏离线烧录器</p>
+          <p class="product-summary">将 HEX 固件存入设备，连接目标板，在触屏上选好芯片型号和文件即可烧录。适用于小批量生产、维修和现场固件更新，烧录时无需连接电脑。</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#guide">查看使用步骤</a>
+            <a class="btn btn--ghost" href="#specs">查看规格与接线</a>
+          </div>
+        </div>
+        <figure class="product-screen">
+          <img src="images/home.png" width="240" height="320" alt="SWD Programmer 首页，显示目标芯片、固件文件、烧录按钮和成功次数" fetchpriority="high" />
+          <figcaption>烧录首页 · 模拟器截图</figcaption>
+        </figure>
+      </section>
+
+      <section id="features" class="section" aria-labelledby="features-title">
+        <h2 id="features-title">产品功能</h2>
+        <div class="feature-grid">
+          <article class="card">
+            <h3>离线烧录</h3>
+            <p>在设备上按系列和型号选择目标芯片，通过 SWD 擦除并写入目标芯片的片内 Flash。</p>
+          </article>
+          <article class="card">
+            <h3>板载存储与 SD 卡</h3>
+            <p>从板载存储或 SD 卡浏览并选取固件。连接电脑后可通过 USB 磁盘复制文件。</p>
+          </article>
+          <article class="card">
+            <h3>读回校验</h3>
+            <p>可开启烧录后校验，也可单独执行校验，将目标 Flash 中的数据与所选固件比对。</p>
+          </article>
+          <article class="card">
+            <h3>烧录进度与计数</h3>
+            <p>屏幕显示擦除、写入、校验等阶段，以及最近一次操作结果和累计烧录成功次数。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="guide" class="section" aria-labelledby="guide-title">
+        <h2 id="guide-title">使用步骤</h2>
+        <div class="guide-layout">
+          <ol class="guide-steps">
+            <li><strong>准备固件</strong>。将 Intel HEX（.hex）文件复制到板载存储或 SD 卡。使用 SD 卡时，设备支持 FAT12、FAT16 和 FAT32 文件系统。</li>
+            <li><strong>连接目标板</strong>。按下方接线表连接 SWD 信号、参考电压和地，并给目标板供电。</li>
+            <li><strong>选择型号和文件</strong>。在首页进入“目标芯片”，选择实际型号，再进入“固件文件”选取 HEX 文件。</li>
+            <li><strong>开始烧录</strong>。点击“烧录”并查看最终结果。需要读回比对时，可开启“烧录完成后校验”或在首页单独执行“校验”。</li>
+          </ol>
+          <div class="guide-screens">
+            <figure class="product-screen">
+              <img src="images/target.png" width="240" height="320" loading="lazy" alt="目标芯片列表中选中 STM32F405RG" />
+              <figcaption>选择目标芯片</figcaption>
+            </figure>
+            <figure class="product-screen">
+              <img src="images/storage.png" width="240" height="320" loading="lazy" alt="固件文件页显示板载存储和 SD 卡入口" />
+              <figcaption>选择固件来源</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="specs" class="section" aria-labelledby="specs-title">
+        <h2 id="specs-title">规格与接线</h2>
+        <div class="spec-layout">
+          <div class="card">
+            <h3>设备规格</h3>
+            <dl class="product-specs">
+              <dt>主控</dt><dd>STM32F405RGT6</dd>
+              <dt>触摸屏</dt><dd>240 × 320 像素</dd>
+              <dt>固件文件</dt><dd>Intel HEX（.hex）</dd>
+              <dt>固件存储</dt><dd>板载 SPI Flash、SD 卡</dd>
+              <dt>USB</dt><dd>USB Type-C，支持磁盘和虚拟串口</dd>
+            </dl>
+            <h3>目标芯片</h3>
+            <p>当前固件为 1,630 个 STM32 型号接入了片内 Flash 算法，涵盖 F0、F1、F4、G0、G4、H7、U5 等系列。具体型号以设备上的可选列表为准。STM32F103RCT6 已完成实板烧录和读回校验，接入算法的型号中仍有待实板验证的型号。</p>
+          </div>
+          <div class="card">
+            <h3 id="connector-title">目标板接口（V1.1）</h3>
+            <table class="spec-table" aria-labelledby="connector-title">
+              <thead>
+                <tr><th scope="col">H1 引脚</th><th scope="col">连接</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>目标板电压参考（VREF，采样输入）</td></tr>
+                <tr><th scope="row">2</th><td>SWDIO · 数据</td></tr>
+                <tr><th scope="row">3</th><td>SWCLK · 时钟</td></tr>
+                <tr><th scope="row">4</th><td>GND · 共地</td></tr>
+                <tr><th scope="row">5</th><td>NRST · 目标复位</td></tr>
+              </tbody>
+            </table>
+            <p>烧录会擦除固件地址涉及的整个 Flash 扇区。更新应用固件前，请确认这些扇区里的引导程序或参数已备份。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../#projects">← 返回工作室项目列表</a></p>
+    </footer>
+  </body>
+</html>

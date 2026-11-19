@@ -45,7 +45,6 @@
         </div>
         <figure class="product-screen">
           <img src="images/home.png" width="240" height="320" alt="SWD Programmer 首页，显示目标芯片、固件文件、烧录按钮和成功次数" fetchpriority="high" />
-          <figcaption>烧录首页 · 模拟器截图</figcaption>
         </figure>
       </section>
 
@@ -101,12 +100,12 @@
             <dl class="product-specs">
               <dt>主控</dt><dd>STM32F405RGT6</dd>
               <dt>触摸屏</dt><dd>240 × 320 像素</dd>
-              <dt>固件文件</dt><dd>Intel HEX（.hex）</dd>
+              <dt>固件文件</dt><dd>Intel HEX（.hex）用于烧录和校验，文件列表也可选择 BIN（.bin）</dd>
               <dt>固件存储</dt><dd>板载 SPI Flash、SD 卡</dd>
-              <dt>USB</dt><dd>USB Type-C，支持磁盘和虚拟串口</dd>
+              <dt>USB</dt><dd>USB Type-C，支持磁盘文件传输</dd>
             </dl>
             <h3>目标芯片</h3>
-            <p>当前固件为 1,630 个 STM32 型号接入了片内 Flash 算法，涵盖 F0、F1、F4、G0、G4、H7、U5 等系列。具体型号以设备上的可选列表为准。STM32F103RCT6 已完成实板烧录和读回校验，接入算法的型号中仍有待实板验证的型号。</p>
+            <p>当前固件为 1,630 个 STM32 型号接入了片内 Flash 算法，涵盖 F0、F1、F4、G0、G4、H7、U5 等系列。具体型号以设备上的可选列表为准。</p>
           </div>
           <div class="card">
             <h3 id="connector-title">目标板接口（V1.1）</h3>
@@ -122,7 +121,6 @@
                 <tr><th scope="row">5</th><td>NRST · 目标复位</td></tr>
               </tbody>
             </table>
-            <p>烧录会擦除固件地址涉及的整个 Flash 扇区。更新应用固件前，请确认这些扇区里的引导程序或参数已备份。</p>
           </div>
         </div>
       </section>
